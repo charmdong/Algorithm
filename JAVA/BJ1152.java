@@ -9,19 +9,15 @@ public class BJ1152 {
 		Set<String> set = new HashSet<String>();
 		Scanner scan = new Scanner(System.in);
 		String str;
+		String[] array;
 		
 		str = scan.nextLine();
 		scan.close();
-		int check;
 		
-		check = str.indexOf(' ');
+		array = str.split(" ");
 		
-		while(check != -1) {
-			set.add(str.substring(0, check));
-			str = str.substring(check+1);
-			check = str.indexOf(' ');
-		}
-		set.add(str);
+		for(String tmp : array)
+			set.add(tmp);
 		
 		System.out.println(set.size());
 	}
